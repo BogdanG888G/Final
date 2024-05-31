@@ -4,6 +4,7 @@ class Room(models.Model):
     number = models.CharField(max_length=1000000)  # Номер комнаты
     name = models.CharField(max_length=1000000)  # Опционально, название комнаты
 
+
     def __str__(self):
         return self.number
 

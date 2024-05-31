@@ -1,7 +1,9 @@
 from django.urls import path
 from web_site.views import start, rules, maps, create_room, room_detail, check_room_existence, choose_railway, manage_railway, view_railways_by_room_number, railway_calculation_view, end_game, room_railways_graph, rules_in_game, room_railways_graph_view
+from django.contrib import admin
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', start, name='start'),
     path('rules/', rules, name='rules'),
     path('maps/', maps, name='maps'),
