@@ -24,14 +24,6 @@ class RailwayManageForm(forms.ModelForm):
         })
     )
 
-    maks_kolvo_reisov_loko = forms.IntegerField(
-        label='Количество рейсов локомотивов',
-        min_value=0, max_value=100000000, required=True,
-        widget=forms.NumberInput(attrs={
-            'style': 'background-color: rgb(2, 67, 143); border-radius: 10px; width: 320px; padding: 10px; color: white; font-size: 15px; margin-top: 10px;margin-left: -240px'
-        })
-    )
-
     new_gryzovye_vagoni = forms.IntegerField(
         label='Новые грузовые вагоны (штук)',
         min_value=0, max_value=2000, required=True,
@@ -56,21 +48,21 @@ class RailwayManageForm(forms.ModelForm):
         })
     )
     repair_puti = forms.BooleanField(
-        label='Ремонт путей', required=False,
+        label='Окончательная выправка и отделка пути', required=False,
         widget=forms.CheckboxInput(attrs={
-            'style': 'margin-top: 10px;margin-left: -730px;'
+            'style': 'margin-top: 10px;margin-left: -500px;'
         })
     )
     repair_vagoni = forms.BooleanField(
-        label='Ремонт вагонов', required=False,
+        label='Модернизация вагонов', required=False,
         widget=forms.CheckboxInput(attrs={
-            'style': 'margin-top: 10px; margin-left: -730px;'
+            'style': 'margin-top: 10px; margin-left: -670px;'
         })
     )
     repair_loko = forms.BooleanField(
-        label='Ремонт локомотивов', required=False,
+        label='Модернизация локомотивов', required=False,
         widget=forms.CheckboxInput(attrs={
-            'style':'margin-left: -680px;'
+            'style':'margin-left: -640px;'
         })
     )
     maks_kolvo_reisov = forms.IntegerField(
